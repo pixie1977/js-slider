@@ -1,0 +1,173 @@
+.font-nunito-normal{
+    font-family: Nunito Sans, serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.font-yeseva-normal {
+    font-family: Yeseva One, serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.main-section {
+    background: #131313;
+    max-width: 1440px;
+    height: 1074px;
+    margin: 0 auto;
+}
+
+.two-column-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.second-section-column {
+    width: 50%;
+}
+
+.second-section-menu {
+
+}
+
+.second-section-menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 107px;
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+}
+
+.second-section-menu li {
+    list-style-type: none; /* Убираем маркеры */
+    margin-right: 20px;
+    padding-right: 0;
+}
+
+.upper-title{
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.upper-title-selected {
+    text-decoration: underline;
+    color: #E3B873;
+}
+
+.img-example{
+    margin-top: 52px;
+}
+
+.img-example:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    background-size: cover;
+    -webkit-transition: opacity 6s ease-in-out;
+    -o-transition: opacity 6s ease-in-out;
+    transition: opacity 6s ease-in-out;
+}
+
+.second-section-big-text {
+    margin-top: 176px;
+    margin-left: 134px;
+    margin-bottom: 34px;
+}
+
+.second-section-big-text p{
+    font-size: 27px;
+    line-height: 37px;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    margin: 0;
+    color: #E3B873;
+}
+
+.text-margin-l134-b34 {
+    margin-left: 134px;
+    margin-bottom: 34px;
+}
+
+.text-f14px-lh27px-m0-white{
+    font-size: 14px;
+    line-height: 27px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+.text-f18px-lh25px-uppercase-light-yellow {
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: #E3B873;
+}
+
+.text-f13px-lh21px-pr29px-white{
+    font-size: 13px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding-right: 29px;
+}
+
+.city-name-container {
+    width: 161px;
+    height: 42px;
+    margin-right: 29px;
+}
+
+.block {
+    display: block
+}
+
+.repair-time-container {
+    width: 103px;
+    height: 24px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.navigation-block {
+    margin-top: 80px;
+}
+
+.navigation-block svg path:hover{
+    text-decoration: underline;
+    color: #E3B873;
+}
+
+.navigation-block svg rect:hover{
+    text-decoration: underline;
+    color: #E3B873;
+}
+
+.anim-show{
+    width: 680px;
+    height: 482px;
+    color:#fff;
+    padding:20px;
+    margin:auto;
+    margin-bottom:20px;
+    text-align:center;
+    opacity:0; /*Элемент полностью прозрачный (невидимый)*/
+    transition: 1s; /*Скорость перехода состояния элемента*/
+    animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+    animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+    animation-delay: 1s; /* Задержка перед началом */
+}
+
+@keyframes show{
+    0%{ opacity:0; }
+    100% { opacity:1; }
+}

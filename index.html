@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>JS Slider</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/index.js"></script>
+    </head>
+    <body onload="doLoadComplete()">
+        <div class="main-section two-column-flex">
+            <div id="left-content" class="second-section-column">
+                <div class="second-section-big-text">
+                    <p>Completed</p>
+                    <p>projects</p>
+                </div>
+                <div class="text-margin-l134-b34">
+                    <p class="text-f14px-lh27px-m0-white font-nunito-normal">Only a small part of the work performed by our company
+                        is presented</p>
+                    <p class="text-f14px-lh27px-m0-white font-nunito-normal">on the site. For 14 years on in the construction</p>
+                    <p class="text-f14px-lh27px-m0-white font-nunito-normal">market we have made happy more than 1000 families</p>
+                </div>
+                <div class="grid-container text-margin-l134-b34">
+                    <div >
+                        <h2 class="text-f18px-lh25px-uppercase-light-yellow font-yeseva-normal">City:</h2>
+                        <div class="city-name-container">
+                            <p id="object-name-first" class="block text-f13px-lh21px-pr29px-white font-nunito-normal">Rostov-on-Don</p>
+                            <p id="object-name-second" class="block text-f13px-lh21px-pr29px-white font-nunito-normal">LCD admiral</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-f18px-lh25px-uppercase-light-yellow font-yeseva-normal">Apartment area:</h2>
+                        <p id="apartment-area" class="text-f13px-lh21px-pr29px-white font-nunito-normal">col right</p>
+                    </div>
+                    <div >
+                        <h2 class="text-f18px-lh25px-uppercase-light-yellow font-yeseva-normal">City:</h2>
+                        <div class="repair-time-container">
+                            <p id="repair-time" class="block text-f13px-lh21px-pr29px-white font-nunito-normal">Rostov-on-Don</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-f18px-lh25px-uppercase-light-yellow font-yeseva-normal">Apartment area:</h2>
+                        <p id="repair-cost" class="text-f13px-lh21px-pr29px-white font-nunito-normal">col right</p>
+                    </div>
+
+                    <div class="navigation-block">
+                        <svg viewBox="0 0 206 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path onclick="doClickRight()" fill-rule="inherit" clip-rule="evenodd" d="M199.045 -0.000183105L205.683 6.63786L199.045 13.2759L198.098 12.3283L203.788 6.63786L198.098 0.947384L199.045 -0.000183105Z" fill="white"/>
+                            <path onclick="doClickRight()" fill-rule="evenodd" clip-rule="evenodd" d="M204.736 7.30778L164.228 7.30777L164.228 5.96771L204.736 5.96772L204.736 7.30778Z" fill="white"/>
+                            <path onclick="doClickLeft()" fill-rule="evenodd" clip-rule="evenodd" d="M6.63807 13.2761L2.29917e-05 6.63802L6.63807 -2.2971e-05L7.58563 0.947545L1.89516 6.63802L7.58563 12.3285L6.63807 13.2761Z" fill="white"/>
+                            <path onclick="doClickLeft()" fill-rule="evenodd" clip-rule="evenodd" d="M0.947579 5.96816L41.4556 5.96817L41.4556 7.30823L0.947578 7.30822L0.947579 5.96816Z" fill="white"/>
+                            <rect onclick="setState(0)" id="r0" x="70.9528" y="1.45618" width="9.56667" height="9.56667" rx="4.78333" fill="white" fill-opacity="0.3"/>
+                            <rect onclick="setState(1)" id="r1" x="98.0583" y="1.4563" width="9.56667" height="9.56667" rx="4.78333" fill="white" fill-opacity="0.3"/>
+                            <rect onclick="setState(2)" id="r2" x="125.164" y="1.4563" width="9.56667" height="9.56667" rx="4.78333" fill="white" fill-opacity="0.3"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+            <div id="right-content" class="second-section-column">
+                <div class="second-section-menu">
+                    <ul id="object-list">
+                        <li><a onclick="setState(0)" id="a0" class="upper-title">Rostov-on-Don, Admiral</a></li>
+                        <li><a onclick="setState(1)" id="a1" class="upper-title">Sochi Thieves</a></li>
+                        <li><a onclick="setState(2)" id="a2" class="upper-title">Rostov-on-Don Patriotic</a></li>
+                    </ul>
+                </div>
+                <img id="image-container" class="anim-show" src="img/admiral.png"/>
+            </div>
+        </div>
+    </body>
+</html>
