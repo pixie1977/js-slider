@@ -46,6 +46,10 @@
     padding-right: 0;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .upper-title{
     font-size: 14px;
     line-height: 19px;
