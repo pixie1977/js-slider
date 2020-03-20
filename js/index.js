@@ -1,45 +1,28 @@
+const delimiter = '%';
 const cityNames = [
-    {name:'Rostov-on-Don LCD admiral', area:'81 m2', time:'3.5 months', cost:'Upon request', img:'admiral.png'},
-    {name:'Sochi Thieves', area:'105 m2', time:'4 months', cost:'Upon request', img:'thieves.png'},
-    {name:'Rostov-on-Don Patriotic', area:'93 m2', time:'3 months', cost:'Upon request', img:'patriot.png'}
+    {name:'Rostov-on-Don%LCD admiral', area:'81 m2', time:'3.5 months', cost:'Upon request', img:'admiral.png'},
+    {name:'Sochi%Thieves', area:'105 m2', time:'4 months', cost:'Upon request', img:'thieves.png'},
+    {name:'Rostov-on-Don%Patriotic', area:'93 m2', time:'3 months', cost:'Upon request', img:'patriot.png'}
 ];
+let objectNameFirstDiv;
+let objectNameSecondDiv;
+let apartmentAreaDiv;
+let repairTimeDiv;
+let repairCostDiv;
+let imageContainerDiv;
+let state = 0;
 
-var state = 0;
-
-function updateCityFirstName(_state) {
-    const element = document.getElementById("object-name-first");
-    element.innerHTML=cityNames[_state].name.toString().split(' ')[0];
-}
-
-function updateCitySecondName(_state) {
-    const element = document.getElementById("object-name-second");
-    const str = cityNames[_state].name.toString();
-    element.innerHTML=str.substr(str.indexOf(' '));
-}
-
-function updateArea(_state) {
-    const element = document.getElementById("apartment-area");
-    element.innerHTML=cityNames[_state].area.toString();
-}
-
-function updateRepairTime(_state) {
-    const element = document.getElementById("repair-time");
-    element.innerHTML=cityNames[_state].time.toString();
-}
-
-function updateRepairCost(_state) {
-    const element = document.getElementById("repair-cost");
-    element.innerHTML=cityNames[_state].cost.toString();
-}
-
-function updateImage(_state) {
-    const element = document.getElementById("image-container");
-    element.src="img/"+cityNames[_state].img;
+function init() {
+    objectNameFirstDiv = document.getElementById("object-name-first");
+    objectNameSecondDiv = document.getElementById("object-name-second");
+    apartmentAreaDiv = document.getElementById("apartment-area");
+    repairTimeDiv = document.getElementById("repair-time");
+    repairCostDiv = document.getElementById("repair-cost");
+    imageContainerDiv = document.getElementById("image-container");
 }
 
 function updateRects(_state) {
-    var i;
-    for( i=0; i<cityNames.length; i++) {
+    for( let i=0; i<cityNames.length; i++) {
         const rect = document.getElementById("r"+i);
         if( _state === i ){
             rect.removeAttribute("fill-opacity");
@@ -62,12 +45,13 @@ function updateTitles(_state) {
 }
 
 function updateAll(_state) {
-    updateCityFirstName(_state);
-    updateCitySecondName(_state);
-    updateArea(_state);
-    updateRepairTime(_state);
-    updateRepairCost(_state);
-    updateImage(_state);
+    objectNameFirstDiv.innerHTML=cityNames[_state].name.toString().split(delimiter)[0];
+    const str = cityNames[_state].name.toString();
+    objectNameSecondDiv.innerHTML=str.substr(str.indexOf(delimiter));
+    apartmentAreaDiv.innerHTML=cityNames[_state].area.toString();
+    repairTimeDiv.innerHTML=cityNames[_state].time.toString();
+    repairCostDiv.innerHTML=cityNames[_state].cost.toString();
+    imageContainerDiv.src="img/"+cityNames[_state].img;
     updateRects(_state);
     updateTitles(_state);
 }
@@ -80,6 +64,7 @@ function setState(num) {
 }
 
 function doLoadComplete(){
+    init();
     console.log("onload");
     setState(0);
 }
