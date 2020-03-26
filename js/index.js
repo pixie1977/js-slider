@@ -47,7 +47,7 @@ function updateTitles(_state) {
 function updateAll(_state) {
     objectNameFirstDiv.innerHTML=cityNames[_state].name.toString().split(delimiter)[0];
     const str = cityNames[_state].name.toString();
-    objectNameSecondDiv.innerHTML=str.substr(str.indexOf(delimiter));
+    objectNameSecondDiv.innerHTML=str.substr(str.indexOf(delimiter)+1);
     apartmentAreaDiv.innerHTML=cityNames[_state].area.toString();
     repairTimeDiv.innerHTML=cityNames[_state].time.toString();
     repairCostDiv.innerHTML=cityNames[_state].cost.toString();
